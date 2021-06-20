@@ -1,6 +1,6 @@
 <?php
     require_once("function/formater.php");
-    $nomAffichage = formater($sexe, $nom, $prenom);
+    $nomAffichage = formatage($sexe, $nom, $prenom);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,5 +14,6 @@
     <h1>Information de <?= $nomAffichage ?></h1>
     <?php foreach($hobbiesDuStagiaire as $hobbie): ?>
         <li><?= $hobbies[$hobbie] ?></li>
+    <?php endforeach; ?>
 </body>
 </html>

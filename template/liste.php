@@ -12,7 +12,11 @@ require_once("function/formater.php");
 <body>
     <ul>
         <?php foreach($stagiaires as $key => $stagiaire): ?>
-            <li><?= formatage($stagiaire["sexe"], $stagiaire["nom"], $stagiaire["prenom"]) ?></li>
+            <li>
+                <a href="detail.php?id=<?= $key ?>">
+                    <?= formatage($stagiaire["sexe"], $stagiaire["nom"], $stagiaire["prenom"]) ?>
+                </a>
+            </li>
         <?php endforeach; ?>
     </ul>
 </body>
